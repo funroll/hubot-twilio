@@ -43,10 +43,8 @@ class Twilio extends Adapter
     return if body.length is 0
     user = @robot.brain.userForId from
 
-		# TODO Assign self.robot.name here instead of 
-    # if body.match(/^Nurph\b/i) is null
-    #   console.log "I'm adding 'Nurph' as a prefix."
-    #   body = 'Nurph' + '' + body
+    if body.match(RegExp('^' + @robot.name + '\b', 'i')) is null
+      body = @robot.name + ' ' + body
 
     @receive new TextMessage user, body, 'messageId'
 
