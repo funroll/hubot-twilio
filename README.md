@@ -7,7 +7,7 @@ send an SMS to your Hubot and he will send an SMS back with the response.
 
 ## Installation
 
-* Add `hubot-twilio` as a dependency in your hubot's `package.json`
+* Add `"hubot-twilio": "git+https://github.com/Queens-Hacks/hubot-twilio.git"` as a dependency in your hubot's `package.json`
 * Install dependencies with `npm install`
 * Run hubot with `bin/hubot -a twilio`
 
