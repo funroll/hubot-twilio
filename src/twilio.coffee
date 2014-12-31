@@ -12,6 +12,7 @@ class Twilio extends Adapter
     super robot
 
   send: (envelope, strings...) ->
+    console.log(JSON.stringify envelope, JSON.stringify strings)
     user = envelope.user
     message = strings.join "\n"
 
