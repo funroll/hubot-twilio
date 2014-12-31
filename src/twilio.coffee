@@ -40,6 +40,7 @@ class Twilio extends Adapter
     self.emit "connected"
 
   receive_sms: (body, from) ->
+    console.log "body=#{body} from=#{from}"
     return if body.length is 0
     user = @robot.brain.userForId from
 
