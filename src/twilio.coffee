@@ -32,7 +32,7 @@ class Twilio extends Adapter
       payload = QS.parse(request.url)
 
       if payload.Body? and payload.From?
-        @receive_sms(payload.Body.trim(), payload.From)
+        @receive_sms(payload.Body[0].trim(), payload.From)
 
       response.writeHead 200, 'Content-Type': 'text/plain'
       response.end()
